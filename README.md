@@ -1,7 +1,30 @@
 # Student-management-system
-A simple Student Management System built in C++ using object-oriented programming principles.
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
+using namespace std;
 
-student-management-system-cpp
-# Student Management System in C++
+class Student {
+private:
+    int rollNo;
+    string name;
+    string course;
+
+public:
+    void input() {
+        cout << "Enter Roll Number: ";
+        cin >> rollNo;
+        cin.ignore(); // clear buffer
+        cout << "Enter Name: ";
+        getline(cin, name);
+        cout << "Enter Course: ";
+        getline(cin, course);
+    }
+
+    void display() const {
+        cout << "Roll No: " << rollNo << "\n";
+        cout << "Name: " << name << "\n";
+        cout << "Course: " << course << "\n";
+        cout << "--------------------
 
